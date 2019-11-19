@@ -24,3 +24,37 @@ echo ${readOnlyVar}
 unset readOnlyVar # can not delete this var, because it is read only!
 echo ${readOnlyVar}
 
+# string add
+
+str=${name}${readOnlyVar}
+echo $str
+str="hello,${name}"
+echo $str
+str="hello"",hello"
+echo $str
+
+# get string length
+
+echo ${#str}
+strLen=${#str}
+echo ${str:1:strLen}
+echo ${str:1:${#str}}
+
+# find index of string
+
+string="runoob is a great site"
+echo ${str}
+echo `expr index "$string" io`  # 输出 4
+echo `expr index "$str" s`
+
+# array
+
+arr=("hello1" "hello2" "hello3" "hello4" "hello5")
+
+# shellcheck disable=SC2068
+for i in ${arr[@]} ; do
+    echo "${i}"
+done
+
+
+
