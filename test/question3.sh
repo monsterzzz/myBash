@@ -2,8 +2,6 @@
 
 # 一目录下所有的文件的扩展名改为bak
 
-rename "s/\.(.*)/\.bak/" test/*
-
-
+echo
 
 
