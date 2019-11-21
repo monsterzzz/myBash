@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
-# 求2个数之和
+# 计算1-100的和
 
-read -r a
-read -r b
-let c=$a+$b
-echo "${c}"
 
+val=0
+for i in {1..100};do
+  let tmp=${val}+${i}
+  val=${tmp}
+done
+echo ${val}
 
